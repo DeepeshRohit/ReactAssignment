@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React , {useState} from 'react';
 import './App.css';
 
-function App() {
+
+const App = ()=> {
+  let time= new Date().toLocaleTimeString();
+  let date = new Date().toLocaleDateString();
+  var  dayOfWeek = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"];
+
+  const [Currtime , setCurrtime] = useState(time);
+  const updatetime=() =>{
+     time= new Date().toLocaleTimeString();
+     setCurrtime(time);
+  }
+  setInterval(updatetime, 1000)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div id ="Clock">
+      <p id = "time">{time}</p>
+  <p id="date">{dayOfWeek[new Date().getDay()]},{date}</p>
+    
+      </div>
+    
   );
 }
 
