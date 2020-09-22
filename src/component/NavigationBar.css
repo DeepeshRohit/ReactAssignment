@@ -1,0 +1,39 @@
+a {
+    display: block;
+    background-color: plum;
+    font-weight: bold;
+    color: black;
+}
+li {
+    list-style: none;
+    display: inline;
+    float: left;
+    width: 25%;
+}
+ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color:royalblue;
+}
+
+a:link {
+    background-color:plum;
+}
+button {
+    background-color: rgb(125, 125, 243);
+    font-weight: bold;
+    font-size: large;
+    box-sizing: content-box;
+    block-size: 40px;}
